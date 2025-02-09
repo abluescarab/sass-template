@@ -1,7 +1,7 @@
-@use "abstracts";
-@use "base";
-@use "components";
-@use "layout";
-@use "pages";
-@use "themes";
-@use "vendors";
+@import "vendors";
+@import "abstracts";
+@import "themes";
+@import "base";
+@import "components";
+@import "layout";
+@import "pages";
