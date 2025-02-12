@@ -1,34 +1,38 @@
 # Sass 7-1 Boilerplate
+**This repository has been updated to more closely reflect the boilerplate written by [Kitty Giraudel](https://github.com/KittyGiraudel/sass-boilerplate). For a more advanced version, use the other repository.**
+
 Base structure with example files:
-* base/
-    * _reset.scss
-    * _typography.scss
-    * _color.scss
-* components/
-    * _buttons.scss
-    * _navigation.scss
-    * _gallery.scss
-* layout/
-    * _header.scss
-    * _grid.scss
-    * _sidebar.scss
-* pages/
-    * _home.scss
-    * _about.scss
-    * _contact.scss
-* themes/
-    * _theme.scss
-    * _admin.scss
-* helpers/ (or utils/ or abstracts/)
-    * _variables.scss
+* abstracts/ (or helpers/ or utils/)
     * _functions.scss
     * _mixins.scss
+    * _variables.scss
+* base/
+    * _color.scss
+    * _reset.scss
+    * _typography.scss
+* components/
+    * _buttons.scss
+    * _gallery.scss
+    * _navigation.scss
+* layout/
+    * _grid.scss
+    * _header.scss
+    * _sidebar.scss
+* pages/
+    * _about.scss
+    * _contact.scss
+    * _home.scss
+* themes/
+    * _admin.scss
+    * _theme.scss
 * vendors/
     * _bootstrap.scss
     * _jquery-ui.scss
 * main.scss
 
-The *base folder* holds boilerplate content. It holds the styles every page of your site should receive.
+The *abstracts, helpers, or utils folder* holds Sass tools, helper files, variables, and config files. These files won’t be compiled. Variables should be project-wide or else placed in their respective component's file.
+
+The *base folder* holds boilerplate content. It contains the styles every page of your site should receive.
 
 The *components folder* holds all your micro layout files. Your styles for buttons and navigation and similar page components.
 
@@ -38,6 +42,4 @@ If you have styles specific to individual pages on your site, you can place them
 
 The *themes folder* holds files that create project specific themes. For example one section of your site might use a color scheme with primary colors, while another section builds a color scheme based on neutrals and earth tones.
 
-The *helpers, utils, or abstracts folder* holds Sass tools, helper files, variables, and config files. These files won’t be compiled. Variables should be project-wide or else placed in their respective component's file.
-
-Finally the *vendors folder* holds 3rd party code and the main.scss file uses @import statements to include the other files.
+Finally the *vendors folder* holds 3rd party code and the main.scss file uses @use statements to include the other files.
